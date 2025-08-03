@@ -5,7 +5,7 @@ import { FaHardHat, FaTrafficLight, FaRoad, FaPhoneAlt, FaClock } from 'react-ic
 
 const HeroSection = () => {
   return (
-    <section className="font-opensans relative min-h-screen w-full overflow-hidden flex items-center justify-center">
+    <section className="font-opensans relative min-h-screen w-full overflow-hidden flex items-center justify-center py-26">
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
