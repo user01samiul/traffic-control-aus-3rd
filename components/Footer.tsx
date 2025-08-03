@@ -166,7 +166,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-6">
             <a
-              href="https://www.linkedin.com"
+              href="https://au.linkedin.com/company/t-s-traffic-control"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-700 transition-colors duration-300"
@@ -174,7 +174,7 @@ const Footer = () => {
               <FaLinkedin className="text-2xl" />
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/people/TS-Traffic/100090085386224/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-700 transition-colors duration-300"
@@ -182,7 +182,7 @@ const Footer = () => {
               <FaFacebookF className="text-2xl" />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/ts.traffic/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-700 transition-colors duration-300"

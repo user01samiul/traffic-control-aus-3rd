@@ -5,7 +5,7 @@ export default function EmergencyResponse() {
   return (
     <div className="mt-24 text-center bg-gray-900 p-12">
       <div className="max-w-4xl mx-auto">
-        <h3 className="text-3xl font-bold text-white mb-6 font-anton">
+        <h3 className="text-3xl font-bold text-white mb-6 font-anton uppercase">
           24/7 Emergency Traffic Management Response, Ready Within Hours
         </h3>
         <p className="text-lg text-gray-300 mb-8">

@@ -3,38 +3,68 @@ import Image from "next/image";
 
 const TestimonialsSection = () => {
   // Placeholder client logos (replace with actual paths in your project)
-const clientLogos = [
-  { name: "adco", src: "https://placehold.co/100x100/transparent/000000?text=ADCO" },
-  { name: "sydney-water", src: "https://placehold.co/100x100/transparent/000000?text=Sydney+Water" },
-  { name: "ugl", src: "https://placehold.co/100x100/transparent/000000?text=UGL" },
-  { name: "transport-nsw", src: "https://placehold.co/100x100/transparent/000000?text=Transport+NSW" },
-  { name: "transport-sydney", src: "https://placehold.co/100x100/transparent/000000?text=Transport+Sydney" },
-  { name: "john-holland", src: "https://placehold.co/100x100/transparent/000000?text=John+Holland" },
-  { name: "veolia", src: "https://placehold.co/100x100/transparent/000000?text=Veolia" },
-  { name: "buildcorp", src: "https://placehold.co/100x100/transparent/000000?text=Buildcorp" },
-  { name: "laing-orourke", src: "https://placehold.co/100x100/transparent/000000?text=Laing+O'Rourke" },
-];
+  const clientLogos = [
+    {
+      name: "adco",
+      src: "https://placehold.co/100x100/transparent/000000?text=ADCO",
+    },
+    {
+      name: "sydney-water",
+      src: "https://placehold.co/100x100/transparent/000000?text=Sydney+Water",
+    },
+    {
+      name: "ugl",
+      src: "https://placehold.co/100x100/transparent/000000?text=UGL",
+    },
+    {
+      name: "transport-nsw",
+      src: "https://placehold.co/100x100/transparent/000000?text=Transport+NSW",
+    },
+    {
+      name: "transport-sydney",
+      src: "https://placehold.co/100x100/transparent/000000?text=Transport+Sydney",
+    },
+    {
+      name: "john-holland",
+      src: "https://placehold.co/100x100/transparent/000000?text=John+Holland",
+    },
+    {
+      name: "veolia",
+      src: "https://placehold.co/100x100/transparent/000000?text=Veolia",
+    },
+    {
+      name: "buildcorp",
+      src: "https://placehold.co/100x100/transparent/000000?text=Buildcorp",
+    },
+    {
+      name: "laing-orourke",
+      src: "https://placehold.co/100x100/transparent/000000?text=Laing+O'Rourke",
+    },
+  ];
 
-const testimonials = [
-  {
-    logo: "https://placehold.co/100x100/transparent/000000?text=Oakhill+College",
-    quote: "The traffic control service provided to our College by T&S Traffic Control was exceptional. Planning was thoroughly completed and communicated before the job commenced. The traffic controllers were on site with all the required equipment well before the commencement time. Clear communication, assertiveness and courtesy was shown to all.",
-    author: "Bob M",
-    company: "Oakhill College",
-  },
-  {
-    logo: "https://placehold.co/100x100/transparent/000000?text=King+Hoist",
-    quote: "T&S Traffic Control have provided great service to us at King Hoists over the years. We have always found them to be willing to help with advice and solutions. We have no hesitation in recommending them.",
-    author: "Michael K",
-    company: "King Hoist",
-  },
-  {
-    logo: "https://placehold.co/100x100/transparent/000000?text=Brand+Right",
-    quote: "Thanks for the great work your team did yesterday. A big thank you to Ben who went above and beyond to help an elderly gentleman across the road. We look forward to working with you again.",
-    author: "Gerard W",
-    company: "Brand Right",
-  },
-];
+  const testimonials = [
+    {
+      logo: "/client logos/D&M Logo.png",
+      quote:
+        "T&S Traffic Control provided excellent service to our College. Their planning, punctuality, and professionalism were impressive. The team was well-prepared, courteous, and ensured clear communication throughout.",
+      author: "Bob M",
+      company: "D&M",
+    },
+    {
+      logo: "/client logos/EMO Civil Logo.avif",
+      quote:
+        "T&S Traffic Control have provided great service to us at King Hoists over the years. We have always found them to be willing to help with advice and solutions. We have no hesitation in recommending them.",
+      author: "Michael K",
+      company: "EMO Civil",
+    },
+    {
+      logo: "/client logos/QMC Logo.jpeg",
+      quote:
+        "Thanks for the great work your team did yesterday. A big thank you to Ben who went above and beyond to help an elderly gentleman across the road. We look forward to working with you again.",
+      author: "Gerard W",
+      company: "QMC",
+    },
+  ];
 
   return (
     <section className="w-full py-16 bg-white font-opensans">
@@ -75,18 +105,16 @@ const testimonials = [
               <p className="text-gray-700 text-center text-base leading-relaxed mb-4">
                 "{testimonial.quote}"
               </p>
-              <p className="text-blue-600 font-semibold">
+              {/* <p className="text-blue-600 font-semibold">
                 {testimonial.author}
-              </p>
+              </p> */}
               <p className="text-gray-600">{testimonial.company}</p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
 };
 
 export default TestimonialsSection;
- 

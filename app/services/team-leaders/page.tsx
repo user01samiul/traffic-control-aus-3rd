@@ -1,5 +1,6 @@
 "use client";
 
+import ContactForm from '@/components/ContactForm';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaHardHat, FaTrafficLight, FaRoad, FaPhoneAlt } from 'react-icons/fa';
@@ -311,6 +312,7 @@ const TrafficControllers = () => {
           </div>
         </div>
       </section>
+      <ContactForm />
     </main>
   );
 };

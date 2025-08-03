@@ -209,9 +209,9 @@ const About = () => {
               Our Community
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-anton">
-              WE <span className="text-blue-500">GIVE BACK</span>
+              WE <span className="text-[#13008e]">GIVE BACK</span>
             </h2>
-            <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-[#13008e] mx-auto"></div>
           </div>
           <div className="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed space-y-6 text-center">
             <p>

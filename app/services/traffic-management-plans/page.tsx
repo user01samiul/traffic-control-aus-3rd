@@ -1,4 +1,5 @@
 "use client";
+import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -57,7 +58,7 @@ const TrafficManagementPlansPage = () => {
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-anton uppercase">
               WHY TRAFFIC MANAGEMENT PLANS{" "}
-              <span className="text-blue-500">MATTER</span>
+              <span className="text-border-[#13008e]">MATTER</span>
             </h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto"></div>
           </div>
@@ -170,8 +171,7 @@ const TrafficManagementPlansPage = () => {
             <div className="relative">
               <div className="absolute -left-8 top-0 h-full w-1 bg-blue-500"></div>
               <h3 className="text-3xl md:text-4xl font-bold mb-8 font-anton uppercase">
-                READY FOR A{" "}
-                <span className="text-blue-500">SAFE PROJECT?</span>
+                READY FOR A <span className="text-blue-500">SAFE PROJECT?</span>
               </h3>
               <div className="space-y-5 text-gray-300 mb-10 font-opensans">
                 <p>
@@ -206,6 +206,18 @@ const TrafficManagementPlansPage = () => {
           </div>
         </div>
       </section>
+      {/* Download Sample TMP Button (Bottom of Page) */}
+      <section className="py-12 bg-white text-center">
+        <a
+          href="/TSTGS%202562%20-%20Stage%201%20-%20Bore%20Holing%20-%20Lynch%20St,%20Young.pdf"
+          download
+          className="inline-block px-10 py-4 bg-[#13008e] text-white font-bold hover:bg-white hover:text-[#13008e] transition-all duration-300 border border-[#13008e] group relative overflow-hidden font-opensans rounded-lg text-lg shadow-md"
+        >
+          Download a Sample TMP
+          <span className="absolute inset-0 bg-[#13008e]/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 z-0"></span>
+        </a>
+      </section>
+      <ContactForm />
     </main>
   );
 };

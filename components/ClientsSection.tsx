@@ -41,7 +41,7 @@ const ClientsSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 font-anton">
           OUR <span className="text-blue-600">CLIENTS</span>
@@ -52,7 +52,7 @@ const ClientsSection = () => {
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={`${logo.alt}-${index}`}
-                className="flex-shrink-0 mx-0 lg:mx-4 grayscale hover:grayscale-0 transition-all duration-300"
+                className="flex-shrink-0 mx-0 lg:mx-4 hover:grayscale-0 transition-all duration-300"
                 style={{
                   width: "180px",
                   height: "100px",
@@ -71,8 +71,8 @@ const ClientsSection = () => {
           </div>
 
           {/* Gradient overlays for smooth edges */}
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-gray-100 to-transparent z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-gray-100 to-transparent z-10"></div>
+          {/* <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-gray-100 to-transparent z-10"></div>
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-gray-100 to-transparent z-10"></div> */}
         </div>
       </div>
     </section>
