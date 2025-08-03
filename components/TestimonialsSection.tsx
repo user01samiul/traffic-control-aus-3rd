@@ -86,30 +86,10 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Clients Section */}
-        {/* <h3 className="text-2xl md:text-3xl font-semibold text-blue-600 text-center mb-10">
-          Clients who choose us
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-          {clientLogos.map((client, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm"
-            >
-              <div className="relative w-32 h-16">
-                <Image
-                  src={client.src}
-                  alt={`${client.name} logo`}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          ))}
-        </div> */}
       </div>
     </section>
   );
 };
 
 export default TestimonialsSection;
+ 
