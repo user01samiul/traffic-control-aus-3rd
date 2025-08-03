@@ -4,6 +4,7 @@ import FAQsSection from "@/components/FAQSection";
 import FleetSection from "@/components/FleetSection";
 import HeroSection from "@/components/HeroSection";
 import IndustriesSection from "@/components/IndustriessSection";
+import IsoCertfied from "@/components/IsoCertfied";
 import ServicesSection from "@/components/ServicesSection";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -22,7 +23,7 @@ export default function Home() {
       <WhyChooseSection />
       <FAQsSection />
       <ConnectWithUsSection />
-      {/* <CapabilityStatementSection /> */}
+      <IsoCertfied />
     </main>
   );
 }

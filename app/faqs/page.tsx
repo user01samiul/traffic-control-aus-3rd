@@ -43,7 +43,7 @@ export default function FAQs() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/40" />
         </div>
         <div className="relative z-10 w-full max-w-3xl px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white font-anton mb-4 drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold text-white font-anton uppercase mb-4 drop-shadow-lg">
             Frequently Asked Questions
           </h1>
           <p className="text-lg md:text-xl text-blue-100 font-opensans drop-shadow">

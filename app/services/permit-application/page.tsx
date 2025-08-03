@@ -1,5 +1,6 @@
 "use client";
 
+import ContactForm from "@/components/ContactForm";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -324,9 +325,9 @@ const PermitApplication = () => {
                     <div className="mt-8">
                       <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
                         <Link href="tel:1300008782">
-                        <h3 className="text-lg font-medium text-red-800">
-                          Emergency Hotline: 1300 008 782
-                        </h3>
+                          <h3 className="text-lg font-medium text-red-800">
+                            Emergency Hotline: 1300 008 782
+                          </h3>
                         </Link>
                         <p className="text-red-700">
                           Available 24/7 for urgent permit requirements.
@@ -403,35 +404,8 @@ const PermitApplication = () => {
           </div>
         </div>
 
-        {/* Contact Details Section */}
-        {/* <div className="bg-gray-100">
-          <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Contact Details
-            </h3>
-            <ul className="text-lg text-gray-700 space-y-2">
-              <li>
-                <span className="font-semibold">Phone:</span>{" "}
-                <a
-                  href="tel:1300008782"
-                  className="text-blue-700 hover:underline"
-                >
-                  1300 008 782
-                </a>
-              </li>
-              <li>
-                <span className="font-semibold">Careers Email:</span>{" "}
-                <a
-                  href="mailto:HR@Tstc.com.au"
-                  className="text-blue-700 hover:underline"
-                >
-                  HR@Tstc.com.au
-                </a>{" "}
-               
-              </li>
-            </ul>
-          </div>
-        </div> */}
+
+        <ContactForm />
       </div>
     </>
   );

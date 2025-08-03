@@ -21,7 +21,7 @@ const FleetSection = () => {
 
           {/* Right Side Content */}
           <div className="flex flex-col justify-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-anton">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-anton uppercase">
               An array of traffic management equipment
             </h2>
             <h3 className="text-2xl md:text-3xl font-semibold text-blue-600">
