@@ -3,41 +3,38 @@ import Image from "next/image";
 
 const TestimonialsSection = () => {
   // Placeholder client logos (replace with actual paths in your project)
-  const clientLogos = [
-    { name: "adco", src: "/logos/adco.png" },
-    { name: "sydney-water", src: "/logos/sydney-water.png" },
-    { name: "ugl", src: "/logos/ugl.png" },
-    { name: "transport-nsw", src: "/logos/transport-nsw.png" },
-    { name: "transport-sydney", src: "/logos/transport-sydney.png" },
-    { name: "john-holland", src: "/logos/john-holland.png" },
-    { name: "veolia", src: "/logos/veolia.png" },
-    { name: "buildcorp", src: "/logos/buildcorp.png" },
-    { name: "laing-orourke", src: "/logos/laing-orourke.png" },
-  ];
+const clientLogos = [
+  { name: "adco", src: "https://placehold.co/100x100/transparent/000000?text=ADCO" },
+  { name: "sydney-water", src: "https://placehold.co/100x100/transparent/000000?text=Sydney+Water" },
+  { name: "ugl", src: "https://placehold.co/100x100/transparent/000000?text=UGL" },
+  { name: "transport-nsw", src: "https://placehold.co/100x100/transparent/000000?text=Transport+NSW" },
+  { name: "transport-sydney", src: "https://placehold.co/100x100/transparent/000000?text=Transport+Sydney" },
+  { name: "john-holland", src: "https://placehold.co/100x100/transparent/000000?text=John+Holland" },
+  { name: "veolia", src: "https://placehold.co/100x100/transparent/000000?text=Veolia" },
+  { name: "buildcorp", src: "https://placehold.co/100x100/transparent/000000?text=Buildcorp" },
+  { name: "laing-orourke", src: "https://placehold.co/100x100/transparent/000000?text=Laing+O'Rourke" },
+];
 
-  const testimonials = [
-    {
-      logo: "/logos/oakhill-college.png",
-      quote:
-        "The traffic control service provided to our College by T&S Traffic Control was exceptional. Planning was thoroughly completed and communicated before the job commenced. The traffic controllers were on site with all the required equipment well before the commencement time. Clear communication, assertiveness and courtesy was shown to all.",
-      author: "Bob M",
-      company: "Oakhill College",
-    },
-    {
-      logo: "/logos/king-hoist.png",
-      quote:
-        "T&S Traffic Control have provided great service to us at King Hoists over the years. We have always found them to be willing to help with advice and solutions. We have no hesitation in recommending them.",
-      author: "Michael K",
-      company: "King Hoist",
-    },
-    {
-      logo: "/logos/brand-right.png",
-      quote:
-        "Thanks for the great work your team did yesterday. A big thank you to Ben who went above and beyond to help an elderly gentleman across the road. We look forward to working with you again.",
-      author: "Gerard W",
-      company: "Brand Right",
-    },
-  ];
+const testimonials = [
+  {
+    logo: "https://placehold.co/100x100/transparent/000000?text=Oakhill+College",
+    quote: "The traffic control service provided to our College by T&S Traffic Control was exceptional. Planning was thoroughly completed and communicated before the job commenced. The traffic controllers were on site with all the required equipment well before the commencement time. Clear communication, assertiveness and courtesy was shown to all.",
+    author: "Bob M",
+    company: "Oakhill College",
+  },
+  {
+    logo: "https://placehold.co/100x100/transparent/000000?text=King+Hoist",
+    quote: "T&S Traffic Control have provided great service to us at King Hoists over the years. We have always found them to be willing to help with advice and solutions. We have no hesitation in recommending them.",
+    author: "Michael K",
+    company: "King Hoist",
+  },
+  {
+    logo: "https://placehold.co/100x100/transparent/000000?text=Brand+Right",
+    quote: "Thanks for the great work your team did yesterday. A big thank you to Ben who went above and beyond to help an elderly gentleman across the road. We look forward to working with you again.",
+    author: "Gerard W",
+    company: "Brand Right",
+  },
+];
 
   return (
     <section className="w-full py-16 bg-white font-opensans">
