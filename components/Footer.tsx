@@ -40,48 +40,103 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-blue-600 mb-4 uppercase tracking-wide">
               Services
             </h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>
-                <Link
-                  href="/services/traffic-management-planning"
-                  className="hover:text-blue-700 transition-colors duration-300"
-                >
-                  Traffic Management Planning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/permit-application"
-                  className="hover:text-blue-700 transition-colors duration-300"
-                >
-                  Permit Application
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/accredited-traffic-controllers"
-                  className="hover:text-blue-700 transition-colors duration-300"
-                >
-                  Accredited TFNSW Traffic Controllers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/equipment-hire"
-                  className="hover:text-blue-700 transition-colors duration-300"
-                >
-                  Traffic Control Equipment for Hire
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/emergency-response"
-                  className="hover:text-blue-700 transition-colors duration-300"
-                >
-                  Emergency Traffic Management Response
-                </Link>
-              </li>
-            </ul>
+            <div className="space-y-2 text-sm text-gray-600">
+              <h4 className="text-xs font-semibold text-blue-800 uppercase tracking-wider mb-2">
+                Traffic Engineering - Planning & Design
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/services/traffic-plans"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    Traffic Plans
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/traffic-management-plans"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    Traffic Management Plans (TMP) (CTMP)
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/swept-path"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    Swept Path Analysis (SPA)
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/event-management-plans"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    Event Management Plans
+                  </Link>
+                </li>
+              </ul>
+              <h4 className="text-xs font-semibold text-blue-800 uppercase tracking-wider mt-4 mb-2">
+                Permit Application
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/services/permit-application#tf-nsw"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    TfNSW TMC ROL Approval
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/permit-application#council-permits"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    Council Permits
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/permit-application#sta-bus"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    STA Bus Approvals
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/permit-application#emergency-approvals"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    Emergency Approvals
+                  </Link>
+                </li>
+              </ul>
+              <h4 className="text-xs font-semibold text-blue-800 uppercase tracking-wider mt-4 mb-2">
+                Traffic Controllers
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/services/team-leaders"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    Team Leaders
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tma-operators"
+                    className="hover:text-blue-700 transition-colors duration-300"
+                  >
+                    TMA Operators
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -92,18 +147,42 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-600">
               <li>
                 <Link
-                  href="/quote"
+                  href="/"
                   className="hover:text-blue-700 transition-colors duration-300"
                 >
-                  Request a Quote
+                  Home
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/news"
+                  href="/about#our-story"
                   className="hover:text-blue-700 transition-colors duration-300"
                 >
-                  News and Articles
+                  Our Story
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about#our-team"
+                  className="hover:text-blue-700 transition-colors duration-300"
+                >
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about#our-fleet"
+                  className="hover:text-blue-700 transition-colors duration-300"
+                >
+                  Our Fleet
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about#accreditations"
+                  className="hover:text-blue-700 transition-colors duration-300"
+                >
+                  Accreditations
                 </Link>
               </li>
               <li>
@@ -111,18 +190,26 @@ const Footer = () => {
                   href="/faqs"
                   className="hover:text-blue-700 transition-colors duration-300"
                 >
-                  FAQs
+                  FAQ
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/jobs"
+                  href="/career"
                   className="hover:text-blue-700 transition-colors duration-300"
                 >
-                  Traffic Control and Management Jobs
+                  Career
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-blue-700 transition-colors duration-300"
+                >
+                  Contact Us
+                </Link>
+              </li>
+              {/* <li>
                 <Link
                   href="/terms"
                   className="hover:text-blue-700 transition-colors duration-300"
@@ -137,7 +224,7 @@ const Footer = () => {
                 >
                   Privacy Policy
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
