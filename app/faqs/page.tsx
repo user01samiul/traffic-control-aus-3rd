@@ -10,7 +10,7 @@ const faqs = [
       "A TGS (Traffic Guidance Scheme) is a detailed plan that outlines how traffic will be managed around a worksite or event. You need a TGS whenever your project impacts normal traffic flow, such as during roadworks, construction, or events that require lane closures or detours.",
   },
   {
-    question: "When is a CTMP?",
+    question: "When is a CTMP required?",
     answer:
       "A CTMP (Construction Traffic Management Plan) is required when construction activities impact public roads, footpaths, or traffic flow. Councils or road authorities typically require a CTMP for major developments, crane lifts, or any works that may disrupt normal traffic or pedestrian movement.",
   },
