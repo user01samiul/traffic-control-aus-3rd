@@ -62,7 +62,9 @@ const ConnectWithUsSection = () => {
               href="/T&S Capability Statement  2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-base uppercase tracking-wide transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-300"
+              className="flex items-center justify-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full font-semibold uppercase tracking-wide transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-300
+              text-xs md:text-base
+              "
             >
               <FaFileDownload className="text-lg" />
               See the Attached Capability Statement
