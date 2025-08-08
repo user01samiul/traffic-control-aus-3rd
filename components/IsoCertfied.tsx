@@ -6,7 +6,7 @@ export default function IsoCertfied() {
       </h2>
       <div className="flex justify-center items-center w-full">
         <img
-          src="/iso.png"
+          src="/AshburtonV1(ISO-45001)Transparent-A.png"
           alt="ISO Certified"
           className="mx-auto max-w-[300px] w-full h-auto rounded-lg  bg-white"
         />

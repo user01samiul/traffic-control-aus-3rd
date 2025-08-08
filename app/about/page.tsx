@@ -146,6 +146,40 @@ const About = () => {
               <div className="absolute inset-0 bg-[#13008e]/20 mix-blend-multiply"></div>
             </div>
           </div>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Savanah Armstrong",
+                role: "Client Relations Manager / HSEQ Officer",
+                image: "/team/white-Photoroom (4).png",
+              },
+              {
+                name: "Taj Rahman",
+                role: "Managing Director",
+                image: "/team/white-Photoroom (3).png",
+              },
+              {
+                name: "Saadat Ahmed",
+                role: "Managing Director",
+                image: "/team/white-Photoroom (2).png",
+              },
+            ].map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="relative h-[300px] w-full mb-4 border-4 border-[#13008e] shadow-lg">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-[#13008e]/20 mix-blend-multiply"></div>
+                </div>
+                <h4 className="text-xl font-semibold text-[#13008e]">{member.name}</h4>
+                <p className="text-gray-600">{member.role}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -239,28 +273,36 @@ const About = () => {
               Our Credentials
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight font-anton">
-              OUR <span className="text-[#13008e]">ACCREDITATIONS</span>
+              WE ARE <span className="text-[#13008e]">ISO AND LGA CERTIFIED</span>
             </h2>
             <div className="w-24 h-1 bg-[#13008e] mx-auto"></div>
           </div>
-          <div className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed space-y-6">
-            <p>
-              T&S Traffic Control maintains the highest industry certifications
-              to ensure we meet and exceed all regulatory requirements. Our
-              commitment to continuous improvement is reflected in our
-              comprehensive quality management systems and safety protocols.
-            </p>
-            <ul className="list-disc list-inside space-y-3 text-left max-w-3xl mx-auto">
-              <li>TfNSW Registered for Traffic Management</li>
-              <li>
-                Transport for Main Roads (TMR) & Traffic Management Registration
-                Scheme (TMRS) Registered
-              </li>
-              <li>ISO Certified Quality Management Systems</li>
-              <li>Environmental Management Certification</li>
-              <li>Occupational Health and Safety Accreditation</li>
-              <li>Regular safety audits and performance reviews</li>
-            </ul>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "ISO Certification",
+                image: "/AshburtonV1(ISO-45001)Transparent-A.png",
+              },
+              {
+                name: "LGA Certification",
+                image: "/newISO.jpg",
+              },
+            ].map((cert, index) => (
+              <div key={index} className="text-center">
+                <div className="relative h-[300px] w-full mb-4 border-4 border-[#13008e]">
+                  <Image
+                    src={cert.image}
+                    alt={cert.name}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+               
+                </div>
+                <h4 className="text-xl font-semibold text-[#13008e]">{cert.name}</h4>
+              </div>
+            ))}
           </div>
         </div>
       </section>

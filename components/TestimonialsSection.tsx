@@ -45,22 +45,21 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       logo: "/client logos/D&M Logo.png",
-      quote:
-        "T&S Traffic Control provided excellent service to our College. Their planning, punctuality, and professionalism were impressive. The team was well-prepared, courteous, and ensured clear communication throughout.",
+      quote: `T&S Traffic Control provided excellent service to our project. Their planning, punctuality, and professionalism were impressive. The team was well-prepared, courteous, and ensured clear communication throughout.
+`,
       author: "Bob M",
       company: "D&M",
     },
     {
       logo: "/client logos/EMO Civil Logo.avif",
-      quote:
-        "T&S Traffic Control have provided great service to us at King Hoists over the years. We have always found them to be willing to help with advice and solutions. We have no hesitation in recommending them.",
+      quote: `T&S Traffic Control have provided great service to us at EMO Civil over the years. We have always found them to be willing to help with advice and solutions. We have no hesitation in recommending them.
+`,
       author: "Michael K",
       company: "EMO Civil",
     },
     {
       logo: "/client logos/QMC Logo.jpeg",
-      quote:
-        "Thanks for the great work your team did yesterday. A big thank you to Ben who went above and beyond to help an elderly gentleman across the road. We look forward to working with you again.",
+      quote: `T&S have been our go to Traffic Management team for years, and we'll never look further. Highly recommend them`,
       author: "Gerard W",
       company: "QMC",
     },
