@@ -305,18 +305,12 @@ const Navbar = () => {
                   Home
                 </Link>
                 <div className="space-y-1">
-                  <Link
-                    href="/about"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 text-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition-colors"
-                  >
-                    About Us
-                  </Link>
+                 
                   <button
                     onClick={() => toggleSubmenu("about")}
                     className="w-full flex justify-between items-center px-4 py-3 text-lg font-medium text-gray-800 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition-colors"
                   >
-                    <span>About Us Submenu</span>
+                    <span>About Us</span>
                     <ChevronDown
                       className={`h-5 w-5 transition-transform ${
                         openSubmenu === "about" ? "rotate-180" : ""
