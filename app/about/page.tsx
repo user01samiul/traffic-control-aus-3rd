@@ -156,12 +156,12 @@ const About = () => {
               {
                 name: "Taj Rahman",
                 role: "Managing Director",
-                image: "/team/white-Photoroom (3).png",
+                image: "/team/white-Photoroom (2).png",
               },
               {
                 name: "Saadat Ahmed",
                 role: "Managing Director",
-                image: "/team/white-Photoroom (2).png",
+                image: "/team/white-Photoroom (3).png",
               },
             ].map((member, index) => (
               <div key={index} className="text-center">
