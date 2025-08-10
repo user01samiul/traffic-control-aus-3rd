@@ -31,7 +31,7 @@ const ContactUs = () => {
             </p>
             <div className="flex justify-center">
               <Link
-                href="tel:(02)96757731"
+                href="tel:+1300008782" 
                 className="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105 font-opensans"
               >
                 <FaPhoneAlt className="text-xl" />
@@ -107,7 +107,8 @@ const ContactUs = () => {
                 Office Location
               </h3>
               <p className="text-gray-300 font-opensans">
-                9 Epic PI, <br />Villawood NSW 2163
+                9 Epic PI, <br />
+                Villawood NSW 2163
               </p>
             </div>
           </div>

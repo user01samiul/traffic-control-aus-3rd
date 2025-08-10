@@ -163,14 +163,14 @@ const JobOpportunities = () => {
                   <li>Ability to work effectively in a team environment</li>
                 </ul>
                 <p className="leading-relaxed">
-                  Contact our office between 9am-5pm at (02) 9675 7731 or apply
+                  Contact our office between 9am-5pm at 1300 008 782 or apply
                   through Indeed.
                 </p>
                 <a
-                  href="mailto:hr@tstc.com.au"
+                  href="tel:+1300008782"
                   className="inline-block px-10 py-4 bg-blue-500 text-white font-bold hover:bg-white hover:text-blue-500 transition-all duration-300 border border-blue-500 group relative overflow-hidden font-opensans"
                 >
-                  <span className="relative z-10">Enquire now</span>
+                  <span className="relative z-10">Call now</span>
                   <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 z-0"></span>
                 </a>
               </div>
@@ -528,7 +528,7 @@ const JobOpportunities = () => {
                   management.
                 </p>
                 <p className="leading-relaxed">
-                  Have questions? Reach out at (02) 9675 7731, Monday to Friday,
+                  Have questions? Reach out at 1300 008 782, Monday to Friday,
                   9am-5pm.
                 </p>
                 <Link
