@@ -167,7 +167,7 @@ const TrafficControllers = () => {
                   T&S Traffic Solutions employs highly experienced Truck Mounted Attenuator (TMA) operators with a minimum of two years’ experience and TfNSW accreditation. Holding Heavy Rigid licenses, our operators are equipped to handle complex traffic control scenarios with precision.
                 </p>
                 <p className="leading-relaxed">
-                  Our TMA operators ensure your work site remains safe and compliant, providing peace of mind for even the most challenging projects. Contact us at 1300 008 782 to discuss your TMA operator needs.
+                  Our TMA operators ensure your work site remains safe and compliant, providing peace of mind for even the most challenging projects. Contact us at +61 1300 008 782 to discuss your TMA operator needs.
                 </p>
                 <Link
                   href="/contact"

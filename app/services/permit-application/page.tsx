@@ -98,10 +98,10 @@ const PermitApplication = () => {
                   <li>
                     <span className="font-semibold">Phone:</span>{" "}
                     <a
-                      href="tel:1300008782"
+                      href="tel:+611300008782"
                       className="text-blue-700 hover:underline"
                     >
-                      1300 008 782
+                      +61 1300 008 782
                     </a>
                   </li>
                   <li>
@@ -324,9 +324,9 @@ const PermitApplication = () => {
 
                     <div className="mt-8">
                       <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
-                        <Link href="tel:1300008782">
+                        <Link href="tel:+611300008782">
                           <h3 className="text-lg font-medium text-red-800">
-                            Emergency Hotline: 1300 008 782
+                            Emergency Hotline: +61 1300 008 782
                           </h3>
                         </Link>
                         <p className="text-red-700">

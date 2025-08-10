@@ -163,11 +163,11 @@ const JobOpportunities = () => {
                   <li>Ability to work effectively in a team environment</li>
                 </ul>
                 <p className="leading-relaxed">
-                  Contact our office between 9am-5pm at 1300 008 782 or apply
+                  Contact our office between 9am-5pm at +61 1300 008 782 or apply
                   through Indeed.
                 </p>
                 <a
-                  href="tel:+1300008782"
+                  href="tel:+611300008782"
                   className="inline-block px-10 py-4 bg-blue-500 text-white font-bold hover:bg-white hover:text-blue-500 transition-all duration-300 border border-blue-500 group relative overflow-hidden font-opensans"
                 >
                   <span className="relative z-10">Call now</span>
@@ -528,7 +528,7 @@ const JobOpportunities = () => {
                   management.
                 </p>
                 <p className="leading-relaxed">
-                  Have questions? Reach out at 1300 008 782, Monday to Friday,
+                  Have questions? Reach out at +61 1300 008 782, Monday to Friday,
                   9am-5pm.
                 </p>
                 <Link
