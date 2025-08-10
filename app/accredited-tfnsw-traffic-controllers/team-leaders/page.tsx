@@ -222,7 +222,7 @@ const PermitApplication = () => {
                   Our team of expert consultants will review your individual traffic management plan and identify any potential issues that may require STA approval. We will then liaise with the STA to obtain the necessary approvals and ensure that your project can proceed as smoothly as possible. Our aim is to take the hassle out of the permit traffic control permit application process and allow you to focus on your project.
                 </p>
                 <p className="leading-relaxed">
-                  If you have any questions or concerns regarding obtaining STA approvals or any other council permit relevant to your project, please don’t hesitate to contact us at 1300 008 782. We are here to help you navigate the council permit application process and ensure your project is a success.
+                  If you have any questions or concerns regarding obtaining STA approvals or any other council permit relevant to your project, please don’t hesitate to contact us at +61 1300 008 782. We are here to help you navigate the council permit application process and ensure your project is a success.
                 </p>
                 <Link
                   href="/contact"
@@ -300,7 +300,7 @@ const PermitApplication = () => {
                   Ready to streamline your permit application process? Contact AAA Traffic Control to learn more about how our services can ensure your project complies with all necessary regulations and approvals.
                 </p>
                 <p className="leading-relaxed">
-                  Have questions or concerns? Feel free to contact us at 1300 008 782 to discuss your permit needs.
+                  Have questions or concerns? Feel free to contact us at +61 1300 008 782 to discuss your permit needs.
                 </p>
               </div>
               <Link
