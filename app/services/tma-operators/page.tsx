@@ -203,8 +203,7 @@ const TrafficControllers = () => {
                 </p>
                 <p className="leading-relaxed">
                   With our expert TMA operators, your work site will remain safe
-                  and fully compliant with all regulations. Contact us at (02)
-                  9675 7731 to discuss your traffic management needs.
+                  and fully compliant with all regulations. Contact us at 1300 008 782 to discuss your traffic management needs.
                 </p>
                 <Link
                   href="/contact"
@@ -319,7 +318,7 @@ const TrafficControllers = () => {
                   how our expert team can meet your traffic management needs.
                 </p>
                 <p className="leading-relaxed">
-                  Have questions? Reach out at (02) 9675 7731 to explore our
+                  Have questions? Reach out at 1300 008 782 to explore our
                   services.
                 </p>
                 <Link

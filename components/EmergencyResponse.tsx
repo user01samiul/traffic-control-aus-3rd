@@ -13,7 +13,7 @@ export default function EmergencyResponse() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+1234567890"
+            href="tel:+1300008782"
             className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 font-medium hover:bg-blue-700 transition-colors duration-300"
           >
             <FaAmbulance className="mr-3" />

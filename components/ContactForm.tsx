@@ -84,8 +84,7 @@ const ContactForm = () => {
             </h3>
             <div className="space-y-5 text-gray-600 mb-10 font-opensans">
               <p className="leading-relaxed">
-                Got any questions or comments? Don’t hesitate to call us at (02)
-                9675 7731 or fill out the form below, and we’ll get back to you
+                Got any questions or comments? Don’t hesitate to call us at 1300 008 782 or fill out the form below, and we’ll get back to you
                 promptly.
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
