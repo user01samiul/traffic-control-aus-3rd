@@ -2,11 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FaHardHat, FaPhoneAlt, FaRoad, FaTrafficLight } from "react-icons/fa";
 
+interface FormData {
+  firstName: string;
+  familyName: string;
+  phoneNumber: string;
+  email: string;
+  streetAddress: string;
+  suburb: string;
+  message: string;
+  canDriveManual: string;
+  hasOwnVehicle: string;
+  qualifications: string[];
+}
+
 const JobOpportunities = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData: FormData = {
     firstName: "",
     familyName: "",
     phoneNumber: "",
@@ -17,14 +30,21 @@ const JobOpportunities = () => {
     canDriveManual: "",
     hasOwnVehicle: "",
     qualifications: [],
-  });
+  };
 
-  const handleInputChange = (e) => {
+  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -34,10 +54,49 @@ const JobOpportunities = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add form submission logic here (e.g., API call)
+    setIsLoading(true);
+    setSubmitStatus(null);
+
+    const submitData = new FormData();
+    submitData.append("firstName", formData.firstName);
+    submitData.append("familyName", formData.familyName);
+    submitData.append("phoneNumber", formData.phoneNumber);
+    submitData.append("email", formData.email);
+    submitData.append("streetAddress", formData.streetAddress);
+    submitData.append("suburb", formData.suburb);
+    submitData.append("message", formData.message);
+    submitData.append("canDriveManual", formData.canDriveManual);
+    submitData.append("hasOwnVehicle", formData.hasOwnVehicle);
+    formData.qualifications.forEach((q) => submitData.append("qualifications[]", q));
+
+    if (fileRef.current && fileRef.current.files) {
+      for (let file of fileRef.current.files) {
+        submitData.append("files", file);
+      }
+    }
+
+    try {
+      const response = await fetch("/api/career", {
+        method: "POST",
+        body: submitData,
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData(initialFormData);
+        if (fileRef.current) {
+          fileRef.current.value = "";
+        }
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -338,6 +397,7 @@ const JobOpportunities = () => {
                     <input
                       type="file"
                       multiple
+                      ref={fileRef}
                       className="mt-1 block w-full border border-gray-300 rounded-md p-2"
                     />
                   </div>
@@ -351,6 +411,7 @@ const JobOpportunities = () => {
                           type="radio"
                           name="canDriveManual"
                           value="Yes"
+                          checked={formData.canDriveManual === "Yes"}
                           onChange={handleInputChange}
                           className="form-radio"
                           required
@@ -362,6 +423,7 @@ const JobOpportunities = () => {
                           type="radio"
                           name="canDriveManual"
                           value="No"
+                          checked={formData.canDriveManual === "No"}
                           onChange={handleInputChange}
                           className="form-radio"
                           required
@@ -381,6 +443,7 @@ const JobOpportunities = () => {
                           type="radio"
                           name="hasOwnVehicle"
                           value="Yes"
+                          checked={formData.hasOwnVehicle === "Yes"}
                           onChange={handleInputChange}
                           className="form-radio"
                           required
@@ -392,6 +455,7 @@ const JobOpportunities = () => {
                           type="radio"
                           name="hasOwnVehicle"
                           value="No"
+                          checked={formData.hasOwnVehicle === "No"}
                           onChange={handleInputChange}
                           className="form-radio"
                           required
@@ -418,6 +482,7 @@ const JobOpportunities = () => {
                           <input
                             type="checkbox"
                             value={qual}
+                            checked={formData.qualifications.includes(qual)}
                             onChange={handleCheckboxChange}
                             className="form-checkbox"
                           />
@@ -428,11 +493,28 @@ const JobOpportunities = () => {
                   </div>
                   <button
                     type="submit"
-                    className="inline-block px-10 py-4 bg-[#13008e] text-white font-bold hover:bg-white hover:text-[#13008e] transition-all duration-300 border border-[#13008e] group relative overflow-hidden font-opensans"
+                    disabled={isLoading}
+                    className={`inline-block px-10 py-4 bg-[#13008e] text-white font-bold transition-all duration-300 border border-[#13008e] group relative overflow-hidden font-opensans ${
+                      isLoading
+                        ? "opacity-50 cursor-not-allowed"
+                        : "hover:bg-white hover:text-[#13008e]"
+                    }`}
                   >
-                    <span className="relative z-10">SUBMIT APPLICATION</span>
-                    <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 z-0"></span>
+                    <span className="relative z-10">
+                      {isLoading ? "Submitting..." : "SUBMIT APPLICATION"}
+                    </span>
+                    {!isLoading && (
+                      <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 z-0"></span>
+                    )}
                   </button>
+                  {submitStatus === "success" && (
+                    <p className="text-green-600">Application submitted successfully!</p>
+                  )}
+                  {submitStatus === "error" && (
+                    <p className="text-red-600">
+                      Error submitting application. Please try again.
+                    </p>
+                  )}
                 </form>
               </div>
             </div>

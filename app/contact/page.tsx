@@ -1,6 +1,6 @@
 "use client";
 
-import ContactForm from "@/components/ContactForm";
+import ContactForm2 from "@/components/ContactForm2";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHardHat, FaPhoneAlt, FaRoad, FaTrafficLight } from "react-icons/fa";
@@ -31,7 +31,7 @@ const ContactUs = () => {
             </p>
             <div className="flex justify-center">
               <Link
-                href="tel:+611300008782" 
+                href="tel:+611300008782"
                 className="flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105 font-opensans"
               >
                 <FaPhoneAlt className="text-xl" />
@@ -50,7 +50,7 @@ const ContactUs = () => {
       </section>
 
       {/* Contact Form Section */}
-      <ContactForm />
+      <ContactForm2 />
 
       {/* Contact Information Section (Black Background) */}
       <section id="contact-info" className="py-24 bg-black text-white">
