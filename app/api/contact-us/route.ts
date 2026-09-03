@@ -13,20 +13,21 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create Nodemailer transporter
+    // Create Nodemailer transporter (Hostinger SMTP)
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GOOGLE_APP_PASSWORD,
+        user: process.env.HOSTINGER_USER,
+        pass: process.env.HOSTINGER_PASSWORD,
       },
     });
 
     // Email options for admin
     const mailOptions = {
-      from: process.env.GMAIL_USER,
-      // to: "enquiries@tstc.com.au",
-      to: "HR@tstc.com.au",
+      from: process.env.HOSTINGER_USER,
+      to: process.env.CONTACT_US_RECIPIENT || "HR@tstc.com.au",
       subject: `New Contact Form Submission from ${name}`,
       text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`,
       html: `
@@ -46,7 +47,7 @@ export async function POST(request: Request) {
 
     // Email options for user confirmation
     const userMailOptions = {
-      from: process.env.GMAIL_USER,
+      from: process.env.HOSTINGER_USER,
       to: email,
       subject: "Thank you for contacting T&S Traffic Solutions!",
       text: `Dear ${name},\n\nThank you for reaching out to T&S Traffic Solutions. We have received your enquiry and our team will get back to you soon.\n\nBest regards,\nT&S Traffic Solutions Team`,

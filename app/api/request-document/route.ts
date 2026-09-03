@@ -49,16 +49,25 @@ export async function POST(request: Request) {
     const meta = REQUEST_META[type];
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GOOGLE_APP_PASSWORD,
+        user: process.env.HOSTINGER_USER,
+        pass: process.env.HOSTINGER_PASSWORD,
       },
     });
 
+    const adminRecipients = (
+      process.env.REQUEST_DOCUMENT_RECIPIENTS || "Taj@tstc.com.au,Saadat@tstc.com.au"
+    )
+      .split(",")
+      .map((addr) => addr.trim())
+      .filter(Boolean);
+
     const adminMailOptions = {
-      from: process.env.GMAIL_USER,
-      to: ["Taj@tstc.com.au", "Saadat@tstc.com.au"],
+      from: process.env.HOSTINGER_USER,
+      to: adminRecipients,
       subject: meta.subject,
       text: `A new ${meta.label} request was submitted.\n\nRequester email: ${email}`,
       html: `
@@ -75,7 +84,7 @@ export async function POST(request: Request) {
     };
 
     const userMailOptions = {
-      from: process.env.GMAIL_USER,
+      from: process.env.HOSTINGER_USER,
       to: email,
       subject: meta.userSubject,
       text: `${meta.userBody}\n\nBest regards,\nT&S Traffic Solutions Team`,

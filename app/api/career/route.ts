@@ -45,19 +45,21 @@ export async function POST(request: Request) {
       }))
     );
 
-    // Create Nodemailer transporter
+    // Create Nodemailer transporter (Hostinger SMTP)
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GOOGLE_APP_PASSWORD,
+        user: process.env.HOSTINGER_USER,
+        pass: process.env.HOSTINGER_PASSWORD,
       },
     });
 
     // Email options for admin
     const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: "hr@tstc.com.au",
+      from: process.env.HOSTINGER_USER,
+      to: process.env.CAREER_RECIPIENT || "hr@tstc.com.au",
       subject: `New Career Application from ${firstName} ${familyName}`,
       text: `First Name: ${firstName}\nFamily Name: ${familyName}\nPhone: ${phoneNumber}\nEmail: ${email}\nStreet Address: ${streetAddress}\nSuburb: ${suburb}\nMessage: ${message}\nCan Drive Manual: ${canDriveManual}\nHas Own Vehicle: ${hasOwnVehicle}\nShift Preference: ${shiftPreference}\nDays Available: ${daysAvailable.join(", ")}\nQualifications: ${qualifications.join(", ")}`,
       html: `
@@ -85,7 +87,7 @@ export async function POST(request: Request) {
 
     // Email options for user confirmation
     const userMailOptions = {
-      from: process.env.GMAIL_USER,
+      from: process.env.HOSTINGER_USER,
       to: email,
       subject: "Thank you for applying to T&S Traffic Solutions!",
       text: `Dear ${firstName},\n\nThank you for submitting your application to T&S Traffic Solutions. We have received your details and our team will review it soon.\n\nBest regards,\nT&S Traffic Solutions Team`,
